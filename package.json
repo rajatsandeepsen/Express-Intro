@@ -1,0 +1,27 @@
+{
+	"name": "theserver",
+	"version": "1.0.0",
+	"description": "Simple Server with NodeJS",
+	"main": "server.js",
+	"type": "module",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "nodemon server.js",
+		"start": "node server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/rajatsandeepsen/theServer.git"
+	},
+	"author": "RajatSandeep",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/rajatsandeepsen/theServer/issues"
+	},
+	"homepage": "https://github.com/rajatsandeepsen/theServer#readme",
+	"dependencies": {
+		"ejs": "^3.1.8",
+		"express": "^4.18.2",
+		"mongoose": "^6.8.3"
+	}
+}
