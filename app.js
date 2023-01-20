@@ -1,18 +1,18 @@
 import express from 'express'
 import path from 'path'
 import { MDB } from './MDB.js';
-import mongoose from 'mongoose'
+// import mongoose from 'mongoose'
 
 
-mongoose.connect(MDB, {useNewUrlParser: true, useUnifiedTopology: true})
-    .then((result) => {})
+// mongoose.connect(MDB, {useNewUrlParser: true, useUnifiedTopology: true})
+    // .then((result) => {})
 
 //resolving root directory ( if using app.sendFile() method, pass this shit as second argument  )
 const __dirname = path.resolve();
 
 // create express app
 const app = express()
-app.listen(5500)
+app.listen(5500,"0.0.0.0")
 app.set('view engine', 'ejs')// register view engine (install before using it)
 
 
@@ -21,7 +21,7 @@ console.log('Server Stated')
 //middleware
 app.use ((req, res, next) => {
     console.log(req.method, req.url)
-    next()
+    next()//allow to run next use()
 })
 // static files (css, js, images, etc)
 app.use(express.static('./views/assets'))
@@ -32,9 +32,9 @@ app.use(express.static('./views/assets'))
 app.get('/', (req, res) => {    
     res.render('index', {title : 'Home',
         data : [
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, facilis.",
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, facilis.",
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, facilis."
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit, facilis.",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit, facilis.",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit, facilis."
         ]})
 })
 app.get('/home', (req, res) => {
@@ -45,9 +45,9 @@ app.get('/home', (req, res) => {
 app.get('/about', (req, res) => {
     res.render('about', {title : 'About',
         data : [
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, facilis.",
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, facilis.",
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, facilis."
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit, facilis.",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit, facilis.",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit, facilis."
         ]
     })
 })

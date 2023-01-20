@@ -1,5 +1,13 @@
 # theServer
 
-## Just learning Server Side Rendering
+Just learning Server Side Rendering
 
-### Tools used: MongoDB, EJS Engine , NodeJS, Express, Mongoose
+###Tools used:
+
+<ul>
+    <li>EJS Engine for View Render Engine</li>
+    <li>NodeJS Express for Local Machine Server</li>
+    <li>NGROK for tunneling and running Server on Local Machine </li>
+</ul>
+
+Learning: MongoDB, Mongoose
