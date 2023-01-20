@@ -1,11 +1,5 @@
 import express from 'express'
 import path from 'path'
-import { MDB } from './MDB.js';
-// import mongoose from 'mongoose'
-
-
-// mongoose.connect(MDB, {useNewUrlParser: true, useUnifiedTopology: true})
-    // .then((result) => {})
 
 //resolving root directory ( if using app.sendFile() method, pass this shit as second argument  )
 const __dirname = path.resolve();
